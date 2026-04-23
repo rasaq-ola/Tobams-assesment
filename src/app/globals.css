@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #3d0a3f;
+  --color-brand-purple-light: #5a1260;
+  --color-brand-pink: #fce8ea;
+  --color-brand-pink-dark: #f9d0d4;
+  --color-brand-dark: #1a1a1a;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1a1a1a;
+  background: #ffffff;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
