@@ -40,11 +40,11 @@ export default function TransformationHub() {
           </p>
 
           {/* Two-col: image + features grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             {/* Image */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden h-full-[300px] ">
               <Image
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                src="/images/TransformationHub.jpg"
                 alt="Dr. Jite Newton, CEO of Tobams Group, speaking at the Transformation Hub webinar"
                 fill
                 className="object-cover"
@@ -52,7 +52,7 @@ export default function TransformationHub() {
             </div>
 
             {/* Feature grid + button */}
-            <div>
+            <div className="flex flex-col h-full">
               <ul
                 className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6"
                 aria-label="Transformation Hub topics"
@@ -77,7 +77,9 @@ export default function TransformationHub() {
                   </li>
                 ))}
               </ul>
-              <LearnMoreLink variant="dark" label="Learn More" />
+              <div className="mt-auto self-start">
+                <LearnMoreLink variant="dark" label="Learn More" />
+              </div>
             </div>
           </div>
         </div>

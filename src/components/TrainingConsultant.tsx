@@ -26,10 +26,11 @@ const cards = [
 export default function TrainingConsultant() {
   return (
     <section
-      className="py-16 md:py-20 lg:py-24 bg-white"
+      className="py-16 md:py-20 lg:py-24 bg-gray-50"
       aria-labelledby="consultant-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#5712441A] py-10">
+      <div className="p-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">
           Training The Consultant
         </p>
@@ -50,24 +51,23 @@ export default function TrainingConsultant() {
         </p>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+        <div className="bg-[#3d0a3f] p-4 grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10  rounded-2xl">
           {cards.map((card) => (
             <article
               key={card.title}
-              className="border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200"
+              className="rounded-2xl p-6 hover:shadow-md transition-shadow duration-200 text-white "
             >
-              <h3 className="text-base font-bold text-gray-900 mb-2">
+              <h3 className="text-white font-bold text-gray-900 mb-2">
                 {card.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm text-white-600 leading-relaxed">
                 {card.description}
               </p>
             </article>
           ))}
         </div>
-
-        <LearnMoreLink />
-      </div>
+        <LearnMoreLink variant="dark" />
+      </div></div>
     </section>
   );
 }

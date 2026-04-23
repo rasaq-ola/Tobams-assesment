@@ -42,7 +42,7 @@ export default function CorporateTrainings() {
           {/* Image — right on desktop */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] order-1 md:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80"
+              src="/images/CorporateTraining.jpg"
               alt="Corporate training session with presenter and team around a table"
               fill
               className="object-cover"

@@ -21,7 +21,7 @@ export default function PersonalisedTraining() {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80"
+              src="/images/PersonalisedTraining.jpg"
               alt="Individual professional training session with two participants"
               fill
               className="object-cover"

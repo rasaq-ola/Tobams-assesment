@@ -43,7 +43,7 @@ export default function CapacityDevelopment() {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] order-1 md:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+              src="/images/CapacityDevelopment.jpg"
               alt="Workshop session with presenter showing charts to participants"
               fill
               className="object-cover"

@@ -38,8 +38,11 @@ export default function LearningManagementSystem() {
             >
               Learning Management System
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 rounded-lg" 
-           style={{ backgroundColor: "#690a4e1a" }} >
+            <div
+            className="p-6 rounded-xl mb-6"
+            style={{ backgroundColor: "#690a4e1a" }}>
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4 p-8 rounded-lg" 
+           >
               TG Academy is a hub of knowledge and skills-building resources designed
               to empower tech talents on their learning journey. From technical courses
               covering the latest programming languages to soft skills training in
@@ -55,8 +58,9 @@ export default function LearningManagementSystem() {
               {courses.map((course) => (
                 <BulletItem key={course} text={course} />
               ))}
-            </ul>
+            </ul></div>
             <LearnMoreLink variant='dark' />
+            
           </div>
         </div>
       </div>

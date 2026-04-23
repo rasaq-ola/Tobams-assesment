@@ -47,7 +47,7 @@ export default function ManagementDevelopmentProgram() {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
-              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80"
+              src="/images/ManagementDevelopment.jpg"
               alt="Management team in a collaborative leadership development session"
               fill
               className="object-cover"
