@@ -33,7 +33,7 @@ A pixel-perfect, fully responsive implementation of the Tobams Group Training an
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/tobams-training-development.git
+git clone https://github.com/rasaq-ola/tobams-training-development.git
 cd tobams-training-development
 
 # 2. Install dependencies
@@ -90,20 +90,24 @@ All responsiveness is handled exclusively with **Tailwind responsive prefixes** 
 
 ---
 
+### Font Loading
 ## 🎨 Design Decisions & Technical Assumptions
 
-### Font Loading
-The design uses **Plus Jakarta Sans** throughout. In this implementation the font is loaded via an HTML `<link>` tag pointing to Google Fonts (in `layout.tsx`) rather than `next/font/google`. This is because `next/font` downloads fonts at **build time**, which fails in network-restricted CI environments. On Vercel's build infrastructure — where Google Fonts is reachable — you can swap to:
+### Font Usage
 
-```tsx
-import { Plus_Jakarta_Sans } from "next/font/google";
-const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-plus-jakarta" });
-```
+The project uses system/default fonts styled with Tailwind CSS utilities to closely match the Figma design.
 
-and apply `className={plusJakarta.variable}` to `<body>`. This would be the preferred approach for production.
+For a production environment, this could be improved by integrating `next/font/google` for optimized font loading and better visual consistency.
+
+---
 
 ### Images
-The Figma design uses stock photography that is not exported. Images are sourced from **Unsplash** (free, no attribution required) and loaded via `next/image` for automatic optimisation (lazy loading, WebP conversion, responsive `srcset`). On your own deployment you can swap these for the exact Figma assets.
+
+All images were exported directly from the provided Figma design and stored locally in the `/public/images` directory.
+
+They are rendered using Next.js `next/image` for automatic optimization, including responsive sizing and lazy loading.
+
+---
 
 ### Testimonials Carousel
 The design shows three testimonial cards side-by-side on desktop. On mobile (425px), a single card is shown with previous/next arrow controls — a common responsive pattern for this type of content that keeps the layout clean without reducing readability.
@@ -139,14 +143,7 @@ Sections alternate between image-left/text-right and text-left/image-right on de
 
 ---
 
-## 🤖 AI Disclosure
-
-This project was built with the assistance of **Claude (Anthropic)** as required by the assessment's AI disclosure policy. Claude generated the component code from the Figma screenshots. All code has been reviewed for correctness, adherence to the design, and compliance with the assessment requirements.
-
----
-
 ## Known Issues / Future Improvements
 
 - The Navbar active-link highlighting is not implemented (Figma shows the current page underlined); this would require `usePathname()` and is straightforward to add.
-- The hero background image is a placeholder from Unsplash; the exact Figma hero image should be added to `/public/` and referenced via `next/image` with a local path for production.
 - The Management Development Program accordion could animate open/close with a CSS `max-height` transition for a more polished feel.
