@@ -43,9 +43,9 @@ export default function ManagementDevelopmentProgram() {
       aria-labelledby="mdp-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           {/* Image */}
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden h-full min-h-[400px]">
             <Image
               src="/images/ManagementDevelopment.jpg"
               alt="Management team in a collaborative leadership development session"

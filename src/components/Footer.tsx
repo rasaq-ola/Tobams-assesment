@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const whatWeDoLinks = [
   "Sustainability Services",
@@ -28,31 +29,45 @@ const solutionLinks = [
   "Book a Consultation",
   "Join Our Slack Community",
 ];
+const titleClass = 'text-sm md:text-xs font-semibold text-white uppercase tracking-widest mb-4';
 
 export default function Footer() {
   return (
     <footer className="bg-[#0f0a14] text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid grid-cols-1 smd:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
           {/* Brand column */}
           <div>
             {/* Logo */}
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-[#3d0a3f] flex items-center justify-center shrink-0">
-                <span className="text-white text-xs font-bold">TG</span>
-              </div>
-              <span className="font-bold text-white text-sm leading-tight">
-                TOBAMS<br />GROUP
-              </span>
-            </div>
-            <p className="text-xs text-gray-400 leading-relaxed mb-5">
-              Tobams Group is an innovative consultancy firm reshaping the future
-              of tech talent development in Africa, specialising in talent
-              acquisition, internships and skill development with a global perspective.
-            </p>
+            <div className="flex flex-col gap-4">
+              {/* Logo */}
+              <Link href="/" aria-label="Tobams Group home">
+                <Image
+                  src="/images/Logo.png"
+                  alt="Tobams Group Logo"
+                  width={120}
+                  height={120}
+                  className="object-contain"
+                />
+              </Link>
 
-            {/* What We Do mini nav */}
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-3">
+              {/* Text */}
+              <p className="text-sm md:text-xs text-gray-400 leading-relaxed max-w-sm">
+                Tobams Group is an innovative consultancy firm reshaping the future
+                of tech talent development in Africa, specialising in talent
+                acquisition, internships and skill development with a global perspective.
+              </p>
+
+              {/* Socials */}
+              <div className="flex gap-3 mt-2">
+                ...
+              </div>
+            </div>
+          </div>
+
+          {/* What We Do mini nav */}
+          <div>
+            <p className="text-sm md:text-xs font-semibold text-white uppercase tracking-widest mb-3">
               What We Do
             </p>
             <ul className="flex flex-col gap-1.5">
@@ -60,34 +75,19 @@ export default function Footer() {
                 <li key={link}>
                   <Link
                     href="#"
-                    className="text-xs text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:underline"
+                    className="text-sm md:text-xs text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:underline"
                   >
                     {link}
                   </Link>
                 </li>
               ))}
             </ul>
-
-            {/* Social icons */}
-            <div className="flex gap-3 mt-6" aria-label="Social media links">
-              {["LinkedIn", "Instagram", "Twitter / X"].map((social) => (
-                <Link
-                  key={social}
-                  href="#"
-                  aria-label={`Tobams Group on ${social}`}
-                  className="w-8 h-8 rounded-full bg-[#2a1a30] flex items-center justify-center hover:bg-[#3d0a3f] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                >
-                  <svg className="w-3.5 h-3.5 text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                  </svg>
-                </Link>
-              ))}
-            </div>
           </div>
 
+          
           {/* Company */}
           <div>
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
+            <p className={`${titleClass} mb-4`}>
               Company
             </p>
             <ul className="flex flex-col gap-2">
@@ -95,7 +95,7 @@ export default function Footer() {
                 <li key={link}>
                   <Link
                     href="#"
-                    className="text-xs text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:underline"
+                    className="text-sm md:text-xs text-gray-500 hover:text-white transition-colors focus:outline-none focus-visible:underline"
                   >
                     {link}
                   </Link>
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Solution */}
           <div>
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
+            <p className="text-sm md:text-xs font-semibold text-white uppercase tracking-widest mb-4">
               Solution
             </p>
             <ul className="flex flex-col gap-2">
@@ -114,7 +114,7 @@ export default function Footer() {
                 <li key={link}>
                   <Link
                     href="#"
-                    className="text-xs text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:underline"
+                    className="text-sm md:text-xs text-gray-400 hover:text-white transition-colors focus:outline-none focus-visible:underline"
                   >
                     {link}
                   </Link>
@@ -122,59 +122,49 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
-          {/* Contact information */}
-          <div>
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
-              Contact Information
-            </p>
-            <div className="flex flex-col gap-3 mb-8">
-              <a
-                href="mailto:info@tobamsgroup.com"
-                className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-2 focus:outline-none focus-visible:underline"
-              >
-                <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@tobamsgroup.com
-              </a>
-              <a
-                href="tel:+447885037148"
-                className="text-xs text-gray-400 hover:text-white transition-colors flex items-center gap-2 focus:outline-none focus-visible:underline"
-              >
-                <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +447885037148
-              </a>
-            </div>
-
-            {/* Registered Office */}
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-3">
-              Registered Office
-            </p>
-            <address className="text-xs text-gray-400 not-italic leading-relaxed mb-4">
-              Unit 5 (B) Registered by Company House,<br />
-              Villa Cottages, 215 North Street, Romford,<br />
-              Essex, United Kingdom, RM1 4QA
-            </address>
-
-            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-2">
-              Nigeria
-            </p>
-            <address className="text-xs text-gray-400 not-italic leading-relaxed">
-              No. 3048722 (Registered by the Corporate<br />
-              Affairs Commission), 4 Near Street, Angwa-Rimi
-            </address>
-          </div>
         </div>
+     
+          <div className="mt-12 bg-[#1a1220] rounded-lg p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+      {/* Registered Offices */}
+      <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
+        
+        <div>
+          <p className={titleClass + " mb-2"}>United Kingdom</p>
+          <p className="text-sm md:text-xs text-gray-400">
+            07451196 (Registered by Company House)<br />
+            Vine Cottages, 215 North Street, Romford, Essex,<br />
+            United Kingdom, RM1 4QA
+          </p>
+        </div>
+
+        <div>
+          <p className={titleClass + " mb-2"}>Nigeria</p>
+          <p className="text-sm md:text-xs text-gray-400">
+            RC 1048722 (Registered by the Corporate Affairs Commission)<br />
+            4, Mbau Close, Angwa-Rimi
+          </p>
+        </div>
+
+      </div>
+
+      {/* Contact Info */}
+      <div>
+        <p className={titleClass + " mb-3"}>Contact Information</p>
+
+        <div className="flex flex-col gap-3 text-sm md:text-xs text-gray-400">
+          <p>📧 theteam@tobamsgroup.com</p>
+          <p>📞 +447886600748</p>
+        </div>
+      </div>
+
       </div>
 
       {/* Bottom bar */}
       <div className="border-t border-[#2a1a30]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">
-            Proudly by Tobams Group 2024. All rights reserved.
+            Copyright ⓒ Tobams Group, 2024. All rights reserved.
           </p>
           <nav aria-label="Legal links">
             <ul className="flex gap-4">
@@ -193,6 +183,7 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
+      </div>
       </div>
     </footer>
   );

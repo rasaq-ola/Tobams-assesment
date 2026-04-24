@@ -6,27 +6,27 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "Anna Reed",
-    role: "Software Engineer",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80",
+    name: "Aisha Yusuf",
+    role: "Founder, CraftHub NG",
+    avatar: "/images/testimonialImage1.png",
     quote:
-      "Tobams Group is an amazing partner. They understood our vision and created a website that truly represents our brand. I highly recommend their Web/Mobile Design service.",
+      "Working with Tobams Group on our website was a breeze. They understood our vision and transformed it into a beautiful online space. Highly recommend their Website Design service!",
   },
   {
     id: 2,
-    name: "Sofia Owens",
-    role: "Product Manager",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80",
+    name: "John Davies",
+    role: "Marketing Manager, E-Commerce Emporium",
+    avatar: "/images/testimonialImage2.png",
     quote:
-      "Their TG Academy Chartered Marketing courses gave our team the frameworks to drive real business results. The instructors were incredibly knowledgeable and engaging.",
+      "Tobams Group's Digital Marketing strategies gave our brand the boost it needed. Simple yet powerful techniques that delivered tangible results. A pleasure to collaborate with!",
   },
   {
     id: 3,
-    name: "Christina Mwangi",
-    role: "Business Analyst",
-    avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80",
+    name: "Chinonso Nwankwo",
+    role: "HR Director, FutureTech Solutions",
+    avatar: "/images/testimonialImage3.png",
     quote:
-      "Tobams Group has been essential as our go-to company. Their teams work tremendously well with high performance. Their work is top notch and the results speak for themselves.",
+      "Tobams Group has been instrumental in our talent acquisition journey. Their Tech Talent Solution service consistently connects us with the right professionals. Reliable and straightforward.",
   },
 ];
 
