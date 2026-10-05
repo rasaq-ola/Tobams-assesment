@@ -7,8 +7,6 @@ A pixel-perfect, fully responsive implementation of the Tobams Group Training an
 ## 🚀 Live URL
 
 > **[https://tobams-training-dev.vercel.app](https://tobams-training-dev.vercel.app)**
->
-> *(Replace this with your actual Vercel URL after deployment)*
 
 ---
 
